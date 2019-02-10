@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript - MA03 - Question 1</title>
+    <style>
+        body{
+            background-color: beige;
+        }
+        
+        form{
+            padding: 50px;
+            background-color: #333;
+            width: 20%;
+            border: 3px solid lightgreen;
+            margin: 200px auto;
+            border-radius: 5px;
+        }
+        
+        form h2{
+            text-align: center;
+            color: white;
+        }
+        
+        form .textfield{
+            display: block;
+            margin: 20px 0 0 5%;
+            width: 90%;
+        }
+        
+        form .submit{
+            margin: 20px 0 0 40%;
+            background-color: lightgreen;
+            font-size: 1.4em;
+        }
+        
+        .submit:hover{
+            background-color: red;
+            transform: scale(1.1);
+            transform: rotate(360deg);
+            transition: 0.25s;
+        }
+        
+        form span{
+            color: red;
+        }
+        
+        #popUp{
+            background-color: red;
+            height: 500px;
+            width: 50%;
+            text-align: center;
+            border: 10px dashed green;
+            margin: 200px 0 0 25%;
+            display: none;
+            opacity: 0.8;
+        }
+        
+        #popUp h2{
+            margin-top: 250px;
+            color: yellow;
+        }
+    </style>
+<body>
+
+<!--Contact Form-->
+    <form onsubmit="return false">
+        <h2>Fill inn your infomation <br /> to win 1.000.000$ <br /> <span>(no scam)</span></h2>
+        <input required pattern="^[a-zA-Z ]{1,50}$" class="textfield" type="text" name="FirstName" placeholder="First Name"/>
+        <input required pattern="^[a-zA-Z ]{1,50}$" class="textfield" type="text" name="LastName" placeholder="Last Name"/>
+        <input required pattern="^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$" class="textfield" type="text" name="Email" placeholder="Email"/>
+        <input required pattern="^[\d+$]{8,10}$" class="textfield" type="text" name="Phone" Placeholder="Phone"/>
+        <input onclick="displayPopUp()" class="submit" id="submit-btn" type="submit"/>
+    </form>
+    
+    <div id="popUp">
+        <h2>CONGRATULATIONS! YOU WON A VIRUS!</h2>
+    </div>
+
+<script src="script.js"></script>
+</body>
+</html>
